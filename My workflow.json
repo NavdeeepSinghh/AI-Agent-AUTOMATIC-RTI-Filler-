@@ -1,0 +1,754 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        624,
+        -224
+      ],
+      "id": "7519a66b-4161-4eef-9bd7-1868b56de2d6",
+      "name": "When chat message received",
+      "webhookId": "dd9076ff-dbd3-4591-9cf3-95093756b46d"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.2,
+      "position": [
+        1664,
+        512
+      ],
+      "id": "188edf8d-6dbb-44e0-9399-1781b7093d67",
+      "name": "Send a message in Gmail",
+      "webhookId": "c4e4235c-d0ea-41f4-9f02-75abcdfeffa7",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "gMsVkzVMPyxi0mtq",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "14QaZilD-WivZDJ0P2gERAMqFMTfu52lkHkvOJn4Lwv4",
+          "mode": "list",
+          "cachedResultName": "AI Agentic aa ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14QaZilD-WivZDJ0P2gERAMqFMTfu52lkHkvOJn4Lwv4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14QaZilD-WivZDJ0P2gERAMqFMTfu52lkHkvOJn4Lwv4/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Timestamp', ``, 'string') }}",
+            "Applicant Name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Applicant_Name', ``, 'string') }}",
+            "PIO Designation": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('PIO_Designation', ``, 'string') }}",
+            "Grievance Subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Grievance_Subject', ``, 'string') }}",
+            "RTI Questions": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('RTI_Questions', ``, 'string') }}",
+            "RTI Draft": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('RTI_Draft', ``, 'string') }}",
+            " Filing Date": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('_Filing_Date', ``, 'string') }}",
+            "Reply Deadline": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Reply_Deadline', ``, 'string') }}",
+            "Status": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Status', ``, 'string') }}",
+            "Verdict": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Verdict', ``, 'string') }}",
+            "Govt Reply": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Govt_Reply', ``, 'string') }}",
+            "Next Action": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Next_Action', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Applicant Name",
+              "displayName": "Applicant Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "PIO Designation",
+              "displayName": "PIO Designation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Grievance Subject",
+              "displayName": "Grievance Subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "RTI Questions",
+              "displayName": "RTI Questions",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "RTI Draft",
+              "displayName": "RTI Draft",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": " Filing Date",
+              "displayName": " Filing Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Reply Deadline",
+              "displayName": "Reply Deadline",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Govt Reply",
+              "displayName": "Govt Reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Verdict",
+              "displayName": "Verdict",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Next Action",
+              "displayName": "Next Action",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        1856,
+        480
+      ],
+      "id": "17885e99-a317-40cb-9fb0-5fcbac13fa16",
+      "name": "Append row in sheet in Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "fuV2ve8jjPfoTAI8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1520,
+        512
+      ],
+      "id": "d31177f0-bd9c-4d06-af35-44a509d35cf8",
+      "name": "Simple Memory1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        1344,
+        512
+      ],
+      "id": "17670239-9b18-4e54-bfd7-110c33e10859",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "QHhIxtdADjAGJqQp",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        1104,
+        432
+      ],
+      "id": "6eb35443-7f4c-4a72-a375-d9c864bd6d43",
+      "name": "SerpAPI",
+      "credentials": {
+        "serpApi": {
+          "id": "j22py12AI2K4dYbL",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b516206d-3dfa-4f22-b03f-58cffec8818c",
+      "name": "Date & Time Tool",
+      "type": "n8n-nodes-base.dateTimeTool",
+      "typeVersion": 2,
+      "position": [
+        1936,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "normalized_input",
+              "name": "normalized_input",
+              "value": "={{ $json.chatInput }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "96987d2f-5245-40f3-a5d8-199dec7a78d7",
+      "name": "Input Normalizer",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1056,
+        -224
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "check_input",
+              "leftValue": "={{ $json.chatInput }}",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty"
+              },
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8f2625af-c820-459b-97d6-db09a83d0421",
+      "name": "Data Validator",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.3,
+      "position": [
+        1408,
+        -224
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "00585fd2-8f8c-4c75-a1d5-7999446b046e",
+      "name": "Wait for Processing",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1728,
+        -224
+      ],
+      "webhookId": "80f7b6a8-d2d9-40d9-8465-437eea53f40a"
+    },
+    {
+      "parameters": {
+        "html": "<div style=\"font-family: Arial, sans-serif; padding: 20px;\">\n<h2 style=\"color: #2563eb;\">🔥 RTI Filed Successfully!</h2>\n<p><strong>Department:</strong> {{ $json.output }}</p>\n<p><strong>Status:</strong> Filed and Logged</p>\n<p><strong>Timestamp:</strong> {{ $now.toFormat(\"MMMM d, yyyy HH:mm\") }}</p>\n</div>"
+      },
+      "id": "ccc57f0c-8cd8-4e11-a6bb-629f1f0117a1",
+      "name": "Format HTML Response",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        2096,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "=## RTI Application Filed\n\n**Department:** {{ $(\"RTI Filing Agent\").item.json.output }}\n\n**Status:** ✅ Filed\n\n**Deadline:** 30 days from today\n\n---\n\nYour RTI has been successfully submitted.",
+        "destinationKey": "markdown_html",
+        "options": {
+          "ghCodeBlocks": true,
+          "strikethrough": true,
+          "tables": true
+        }
+      },
+      "id": "7dced8c3-34d3-46e5-9efb-3fbb48e5e9ee",
+      "name": "Convert to Markdown",
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        2416,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "sessionId"
+            },
+            {
+              "fieldToAggregate": "chatInput",
+              "renameField": true,
+              "outputFieldName": "all_inputs"
+            }
+          ]
+        },
+        "options": {
+          "mergeLists": true
+        }
+      },
+      "id": "218ff7d9-e819-4e8f-b200-cf386ff5930b",
+      "name": "Aggregate Session Data",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "fieldsToSummarize": {
+          "values": [
+            {
+              "field": "sessionId"
+            },
+            {
+              "aggregation": "countUnique",
+              "field": "sessionId"
+            }
+          ]
+        },
+        "options": {
+          "outputFormat": "singleItem"
+        }
+      },
+      "id": "151aebf5-c4f4-4a67-9006-21373e374eb9",
+      "name": "Summarize Metrics",
+      "type": "n8n-nodes-base.summarize",
+      "typeVersion": 1.1,
+      "position": [
+        2560,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a Data Extraction Specialist. Extract structured data from user input and return JSON: { \"name\": \"\", \"street\": \"\", \"city\": \"\", \"state\": \"\", \"pincode\": \"\", \"email\": \"\", \"grievance_raw\": \"\" }. Auto-parse messy text. If critical field missing (name/email/city), ask ONLY that field. Keep response minimal.",
+          "maxIterations": 5
+        }
+      },
+      "id": "91985c0c-b49a-43ba-9cc8-44e2828caf1c",
+      "name": "Data Extraction Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        624,
+        144
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "id": "d5888463-6cb0-407d-8312-298a089c64b1",
+      "name": "OpenAI Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        464,
+        400
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "QHhIxtdADjAGJqQp",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Find the correct government department and PIO for this issue: {{ $json.output }}. Use SerpAPI tool to search. Return department name, PIO designation, and office address.",
+        "options": {
+          "systemMessage": "You are a Department Research Specialist. Find the correct government department and PIO details. Tools: SerpAPI, Perplexity. Search: \"RTI Public Information Officer [department] [city] [state]\". Fallback: Roads→Municipal Corporation, Electricity→State Board, Water→Jal Board. Return JSON: {\"department_name\": \"\", \"pio_designation\": \"Public Information Officer\", \"office_address\": \"\"}. Never block flow.",
+          "maxIterations": 8
+        }
+      },
+      "id": "b17406cf-402e-4c25-b57c-8ae2638772c1",
+      "name": "Department Research Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1024,
+        176
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "id": "43c3bdfe-b532-42b7-8361-8eda9d7f89d9",
+      "name": "OpenAI Chat Model3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        896,
+        416
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "QHhIxtdADjAGJqQp",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Generate RTI application and file it. Applicant: {{ $(\"Data Extraction Agent\").item.json.output }}, Department: {{ $(\"Department Research Agent\").item.json.output }}. Create Form-1, log to Google Sheets, and send email.",
+        "options": {
+          "systemMessage": "You are an RTI Filing Specialist. Generate legally valid RTI Form-1 and complete filing. Tools: Gmail, Google Sheets, Date & Time. Steps: 1) Generate 3-5 RTI questions (document-based), 2) Create Form-1 with receipt RTI/[YEAR]/[STATE]/[5 DIGITS], 3) Calculate deadline (today + 30 days), 4) Log to Sheets, 5) Send email. Final response: 🔥 RTI filed and emailed! ✅ Department found: [NAME] ✅ Form-1 drafted ✅ Logged ✅ Emailed ⏰ Govt must reply by: [DATE] Receipt: [NUMBER]",
+          "maxIterations": 12
+        }
+      },
+      "id": "3808da2e-a1bc-40c6-b5b1-2d4ca992e006",
+      "name": "RTI Filing Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1392,
+        160
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Send a message in Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet in Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Input Normalizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "Department Research Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Input Normalizer": {
+      "main": [
+        [
+          {
+            "node": "Data Validator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Validator": {
+      "main": [
+        [
+          {
+            "node": "Wait for Processing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait for Processing": {
+      "main": [
+        [
+          {
+            "node": "Data Extraction Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format HTML Response": {
+      "main": [
+        [
+          {
+            "node": "Convert to Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Markdown": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Session Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Session Data": {
+      "main": [
+        [
+          {
+            "node": "Summarize Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Extraction Agent": {
+      "main": [
+        [
+          {
+            "node": "Department Research Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Data Extraction Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Department Research Agent": {
+      "main": [
+        [
+          {
+            "node": "RTI Filing Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Department Research Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RTI Filing Agent": {
+      "main": [
+        [
+          {
+            "node": "Format HTML Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summarize Metrics": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "31ae232c-e12e-41c3-b927-2d325e997959",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0a399e169855da879731bd1f5208b7b2fc82ee657157fc8748ef95fb88bb214b"
+  },
+  "id": "Zn0Vrq2ZbuUN4L05",
+  "tags": []
+}
