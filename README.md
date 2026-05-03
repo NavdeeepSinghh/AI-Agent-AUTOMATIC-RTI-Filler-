@@ -110,8 +110,4 @@ The system maintains:
 - **Email**: Gmail Integration  
 - **Formatting**: HTML → Markdown  
 
----
 
-## 💡 Example Use Case
-
-### Input:
